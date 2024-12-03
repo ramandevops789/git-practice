@@ -21,15 +21,15 @@ VALIDATE(){
 
 CHECK_ROOT(){
 
-    dnf list installed git 
+    dnf list installed ngnix 
 
     if [ $? -ne 0 ]
     then
-        echo "Git is not installed... going to install it"
-        dnf install git -y
-        VALIDATE $? "Installing git"
+        echo "Nginx is not installed... going to install it"
+        dnf install nginx -y
+        VALIDATE $? "Installing nginx"
     else
-        echo "Git is already installed... nothing to do"
+        echo "Nginx is already installed... nothing to do"
     fi
 
     dnf list installed mysql
