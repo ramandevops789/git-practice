@@ -5,7 +5,7 @@ USERID=$(id -u)
 if[$USERID -ne 0]
 then
     echo "Please run this script with root privilages"
-    exit1
+    exit 1
 fi
 
 dnf list installed git
@@ -17,7 +17,7 @@ then
     if[$? -ne 0]
     then
         echo "Git installation is not sucess...Please check it"
-        exit1
+        exit 1
     else
         echo "Git installation is success"
     fi
@@ -34,7 +34,7 @@ then
     if[$? -ne 0]
     then
         echo "Mysql installation is not success... Please check"
-        exit1
+        exit 1
     else
         echo "Mysql installation is success"
     fi
