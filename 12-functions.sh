@@ -14,14 +14,14 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo "$2 is ...FAILED"
-        exit1
+        exit 1
         echo "$2 is ...SUCCESS"
     fi
 }
 
 CHECK_ROOT(){
 
-    dnf list installed git
+    dnf list installed git 
 
     if [ $? -ne 0 ]
     then
