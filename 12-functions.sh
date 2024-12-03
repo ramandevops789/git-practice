@@ -19,9 +19,9 @@ VALIDATE(){
     fi
 }
 
-CHECK_ROOT(){
+CHECK_ROOT
 
-    dnf list installed ngnix 
+    dnf list installed nginx 
 
     if [ $? -ne 0 ]
     then
@@ -42,4 +42,3 @@ CHECK_ROOT(){
     else
         echo "Mysql is already installed... nothing to do"
     fi
-}
